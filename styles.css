@@ -11,7 +11,7 @@ body {
 .card {
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 250px 80px;
+    grid-template-rows: 210px 220px 80px;
     grid-template-areas: "image" "text" "stats";
 
     font-family: roboto;
@@ -47,7 +47,7 @@ body {
     border-radius: 16px;
     filter: blur(8px);
     transform: translateZ(-1px); /*or z-index */
-    animation: rgb 6s linear infinite;
+    animation: rgb 4s linear infinite;
   }
 
 @keyframes rgb {
@@ -75,6 +75,10 @@ body {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("img3.png");
 }
 
+.card-image.four {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("img4.png");
+}
+
 .card-text {
     grid-area: text;
     margin: 25px;
@@ -97,9 +101,13 @@ body {
     color: purple;
  }
 
+ .card-text span.blue{
+    color: blue;
+ }
+
 .card-text p {
     color: gray;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -112,7 +120,7 @@ body {
 .card-stats {
     grid-area: stats;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
